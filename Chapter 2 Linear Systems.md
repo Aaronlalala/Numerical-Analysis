@@ -103,7 +103,7 @@ Check Strang's Textbook at chapter 2. Very good explanation.
 
 Solve a triangular matrix linear system requires only $n^2$.
 
-Computing the LU factorization by Gaussian eliminatino requires about $n^3/3$ floating-ponit multiplications and additions.
+Computing the LU factorization by Gaussian elimination requires about $n^3/3$ floating-ponit multiplications and additions.
 
 Thus, using LU factorization method to solve linear system is dominanty by the factoriazation part.
 

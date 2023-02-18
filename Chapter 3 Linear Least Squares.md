@@ -50,3 +50,36 @@ Then we can use the pseudo inverse of A to compute the condition nubmer of singu
 
 ## QR Factorization
 
+We want to change the matrix A into triangular systems, so that it's much easier to solve. QR factorization is such a transformation $A = Q \left(
+\begin{array}{rr} 
+R  \\
+O 
+\end{array}
+\right)$, where R is an n\*n upper triangular matrix and Q is an m\*m orthogonal matrix. Then, 
+
+$\|r\|^2_2 = \|b - Ax\| = \|b - Q \left(
+\begin{array}{rr} 
+R  \\
+O 
+\end{array}
+\right)\|^2_2$. Multiply the residual by the orthogonal matrix won't change its Euclidean norm. So $\|Q^Tb -  \left(
+\begin{array}{rr} 
+R  \\
+O 
+\end{array}
+\right)\|^2_2 = \|c_1-Rx\|^2_2 + \|c_2\|^2_2$, where $Q^Tb = [c_1, c_2]^T$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
