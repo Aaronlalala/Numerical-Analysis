@@ -58,21 +58,27 @@ $\|A\|_{\infin}$ is the maximum absolute row sum of the matrix.
 
 ## Matrix Condition Number
 
+### Intuition
+
 The condition number of a matrix is a measure of the sensitivity of the solution of a linear system to small perturbations in the data. A high condition number indicates the solutionis highly sensitive to small perturbations in the data.
+
+### Condition Number Measures Singularity
 
 $$\kappa(A) = \|A\|_2 \|A^{-1}\|_2 = \frac{\sigma_{\max}(A)}{\sigma_{\min}(A)}$$, where $\sigma$ denotes the singular value of matrix A. If matrix A is singular, then $\kappa(A) = \infin$. Thus, condition number is also a measure of how a matrix is close to singular.
 
 However, determinant of a matrix is not a good indicator of near singularity: although a matrix A is singular if det(A) = 0, the magnitude of a nonzero determinant, large or small, gives no information on how close to singular the matrix may be.
 
+### Scaling
 
+Norm of the matrix is dependent on scale factor. However, Condition number has no relation to the scaling. Because, scale factor will be canceled at division of two norms.
+
+### Supplementary Notes
 
 ==Why $\|A^{-1}\|_2 = \frac{1}{\sigma_{min}(A)}$?==
 
 Given a matrix $A$, its SVD can be written as $A = U\Sigma V^T$, where $U$ and $V$ are orthogonal matrices and $\Sigma$ is a diagonal matrix whose diagonal entries are the singular values of $A$. The singular values of $A$ are positive real numbers that measure the magnitude of the stretches that $A$ applies to the unit vectors.
 
 If $A$ is invertible, then its inverse $A^{-1}$ can be written as $A^{-1} = V \Sigma^{-1} U^T$, where $\Sigma^{-1}$ is a diagonal matrix whose diagonal entries are the reciprocals of the singular values of $A$. The operator norm of $A^{-1}$ is equal to the reciprocal of the smallest non-zero singular value of $A$, that is, $\|A^{-1}\| = \frac{1}{\sigma_{\min}}$, where $\sigma_{\min}$ is the smallest non-zero singular value of $A$.
-
-
 
 ### Perturbation to the output coefficient
 
@@ -83,11 +89,11 @@ It also provides a **upper bound** for the relative error $\frac{
 
 I am also confused what the exactly the norm is used in matrix condition number? If the condition number of a matrix measures the ratio of the maximum relative stretching to the maximum relative shrinking that the matrix does to any nonzero vectors. I believe p=2, because this norm represents the length. However, in the picture, it also mentioned something related to $\|A\|_{\infin}$ and $\|A\|_0$. That really confused me.
 
+
+
 ## Complexity to Solve a Linear System
 
-orthogonal:
-
-Triangular:
+Solving orthogonal or triangular matrices require $O(n^2)$ operations.
 
 ## LU Decomposition
 
